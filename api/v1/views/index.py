@@ -4,7 +4,7 @@ flask route on the object app_views that returns a JSON status
 """
 from api.v1.views import app_views
 from flask import jsonify
-
+from models import storage
 
 @app_views.route('/status')
 def status():
@@ -13,3 +13,10 @@ def status():
     """
     resp = {"status": "OK"}
     return jsonify(resp)
+
+@app_views_route('/stats')
+def stats():
+    """
+    Create an endpoint that retrieves the number of each objects by type
+    """
+

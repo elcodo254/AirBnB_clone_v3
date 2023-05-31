@@ -23,4 +23,4 @@ if __name__ == "__main__":
     """Run flask server
     (variable app)
     """
-    app.run(host=host, port=port)
+    app.run(host=host, port=port, threaded=True)
